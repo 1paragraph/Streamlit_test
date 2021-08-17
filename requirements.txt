@@ -1,3 +1,4 @@
 opencv-python-headless
 torch
 torchvision
+albumentations=1.0.3

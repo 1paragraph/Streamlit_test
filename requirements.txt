@@ -31,8 +31,8 @@ pandas
 # albumentations>=1.0.3
 thop  # FLOPs computation
 
-_libgcc_mutex==0.1
-_openmp_mutex==4.5
+#_libgcc_mutex==0.1
+#_openmp_mutex==4.5
 absl-py==0.13.0
 albumentations==1.0.3
 backcall==0.2.0

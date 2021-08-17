@@ -11,4 +11,4 @@ if uploaded_file is not None:
 
 a = cv2.imread(uploaded_file)
 
-st.write(file_details)
+st.write(a)

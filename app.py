@@ -16,4 +16,4 @@ if uploaded_file is not None:
     st.image(opencv_image, channels="BGR")
     st.write(opencv_image)
 
-st.write(os.getcwd())
+st.write(os.listdir(os.getcwd()))

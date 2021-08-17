@@ -5,12 +5,12 @@ import streamlit as st
 
 
 uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg'])
-if uploaded_file is not None:
-    file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
-    st.write(file_details)
 
 if uploaded_file is not None:
-    with open(uploaded_file.name,'wb') as f:
-        f.write(uploaded_file.read())
+    # Convert the file to an opencv image.
+    file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
+    opencv_image = cv2.imdecode(file_bytes, 1)
 
-st.write(f)
+    # Now do something with the image! For example, let's display it:
+    st.image(opencv_image, channels="BGR")
+    st.write(opencv_image)

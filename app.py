@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import cv2
 import streamlit as st
+import os
 
 
 uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg'])
@@ -14,3 +15,5 @@ if uploaded_file is not None:
     # Now do something with the image! For example, let's display it:
     st.image(opencv_image, channels="BGR")
     st.write(opencv_image)
+
+st.write(os.getcwd())

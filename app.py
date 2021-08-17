@@ -9,6 +9,8 @@ if uploaded_file is not None:
     file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
     st.write(file_details)
 
-a = cv2.imread(uploaded_file)
+if uploaded_file is not None:
+    with open(uploaded_file.name,'wb') as f:
+        f.write(uploaded_file.read())
 
-st.write(a)
+st.write(f)
